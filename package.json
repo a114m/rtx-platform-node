@@ -1,0 +1,29 @@
+{
+  "name": "rtx-platform",
+  "version": "0.1.0",
+  "description": "RTX Platform API support for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a114m/rtx-platform-node.git"
+  },
+  "keywords": [
+    "RTX",
+    "RTX Platform",
+    "RTX API"
+  ],
+  "author": "allam <m-allam@outlook.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/a114m/rtx-platform-node/issues"
+  },
+  "homepage": "https://github.com/a114m/rtx-platform-node#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.1"
+  }
+}
