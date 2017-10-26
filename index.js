@@ -44,7 +44,13 @@ class RTXClient {
     }
     if (body)
       options['body'] = body;
-    return callBack ? req(options, callBack) : reqPr(options);
+
+    const _callBack = (err, res, body) => {
+      if (!err && body)
+        body = JSON.parse(body)
+      callBack(err, res, body)
+    }
+    return callBack ? req(options, _callBack) : reqPr(options).then(res => JSON.parse(res));
   }
 
   sign(method, resourcePath, timestamp, apiKey, secretKey, body=null) {

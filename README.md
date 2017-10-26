@@ -34,20 +34,20 @@ let rtxClient = new RTXClient('https://api.rtxplatform.com/', '<your api_key>', 
 Get all pops creatives
 ```
 rtxClient.request('GET', '/pops-api/v1/creatives', null, null).then(res => {
-  console.log(res)
+  console.log(JSON.stringify(res))
 });
 ```
 ----------
 Get paused pops creatives
 ```
 rtxClient.request('GET', '/pops-api/v1/creatives', {status: 'paused'}, null).then(res => {
-  console.log(res)
+  console.log(JSON.stringify(res))
 });
 ```
 ----------
 Using callback instead of promises
 ```
 rtxClient.request('GET', '/pops-api/v1/creatives', {status: 'paused'}, null, function(err, res, body){
-  console.log(body);
+  console.log(JSON.stringify(body));
 });
 ```
